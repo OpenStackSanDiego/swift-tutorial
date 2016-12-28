@@ -36,8 +36,7 @@ Now we're going to use the API to test out some more advanced features. You'll n
 <LI>Save the downloaded file to your local computer
 </UL>
 
-Using the <A HREF="http://docs.openstack.org/developer/python-openstackclient/" target="_blank">OpenStackClient</A>, you're going to work with the object store. In particular, you're going to use the <A HREF="http://docs.openstack.org/developer/python-openstackclient/command-objects/object.html" target="_blank">Object Store commands</A
+Using the <A  target="_blank" HREF="http://docs.openstack.org/developer/python-openstackclient/">OpenStackClient</A>, you're going to work with the object store. In particular, you're going to use the <A  target="_blank" HREF="http://docs.openstack.org/developer/python-openstackclient/command-objects/object.html">Object Store commands</A>
 
 
-xxxx 
 
