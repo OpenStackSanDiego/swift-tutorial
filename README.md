@@ -4,22 +4,21 @@ Using OpenStack Swift Object Store
 You've been tasked with making your companies software and documentation available via the Internet. You've decided to put the files onto a OpenStack Swift Object powered cloud. Swift provide a reliable image store with API access to upload, download and manage the content.
 
 <UL>
-<LI>Save a copy of these instructions locally so you can upload them onto Swift
-<LI>Assign yourself an account from the <A HREF="https://etherpad.openstack.org/p/san-diego-swift">Etherpad</A> https://etherpad.openstack.org/p/san-diego-swift
+<LI>Download the file: http://ossd.openstacksandiego.org:8080/v1/AUTH_5ff6951f221d401b9fca8b2f8816440c/public/beerkeg.jpg
+<LI>Download the file: http://ossd.openstacksandiego.org:8080/v1/AUTH_5ff6951f221d401b9fca8b2f8816440c/public/cookie.jpg
+<LI>Assign yourself an account from the <A HREF="https://etherpad.openstack.org/p/san-diego-swift">Etherpad</A> https://etherpad.openstack.org/p/san-diego-swift The password to the account is on the whiteboard.
 </UL>
 
 Swift stores files into containers. First step is to create a new container and upload the documentation into the new container. 
 <UL>
-<LI>Log into <A HREF="https://ca.ovh.com">OVH</A> (https://ca.ovh.com)
-<LI>Go to the Public Storage console ('Public Cloud'->'Servers'->'Summit'->'Storage')
-<LI>Create a public containers called Software in the BHS region
+<LI>Log into <A HREF="https://ossd.openstacksandiego.org">OpenStack San Diego Cloud</A> (https://ossd.openstacksandiego.org/
+<LI>Go to the storage link ('Object Store' -> 'Containers')
+<LI>Create a public containers called Public
 <LI>Take note of the container URL
-<LI>Upload the documentation and binary into the new container
+<LI>Upload the images into the new container
 </UL>
 
-The BHS region consists of two data centers in Beauharnois, Canada (outside of Montreal).
-
-The container URL will be of the form https://storage.bhs1.cloud.ovh.net/v1/AUTH_LONG_STRING/Software.
+The container URL will be of the form https://ossd.openstacksasndiego.org:8080/v1/AUTH_LONG_STRING/Public.
 Append the filename to the end of the public URL to get the download link. Test to validate that the file can be downloaded.
 
 <UL>
@@ -51,13 +50,6 @@ First we'll play with containers listing the available ones and creating a new o
 <LI>openstack container list
 <LI>openstack container show public
 <LI>openstack container create docs
-</UL>
-
-Create a file and upload it into the container docs. The 'dd' command creates a file with random content.
-<UL>
-<LI>dd if=/dev/urandom of=docs count=1024
-<LI>openstack object create public docs
-<LI>openstack object show public docs
 </UL>
 
 Here are additional things to try:
